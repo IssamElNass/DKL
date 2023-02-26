@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DKL - Test</title>
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-color: #ffd166;
+        margin: 0;
+        overflow-x: hidden;
+        width: 100vw;
+      }
+
+      * {
+        font-family: "Satoshi", sans-serif;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 5em;
+        height: 100vh;
+      }
+
+      .desc {
+        color: #df335c;
+        font-weight: 500;
+        margin-bottom: 20%;
+        text-align: center;
+      }
+
+      .title {
+        font-weight: 900;
+        font-size: 84px;
+        color: #df335c;
+        text-align: left;
+        margin-bottom: 0;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .title {
+          font-weight: 900;
+          font-size: 44px;
+          color: #df335c;
+          text-align: left;
+          margin-bottom: 0;
+          text-align: center;
+        }
+
+        .container {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          padding: 0 1.5em;
+          height: 100vh;
+        }
+      }
+
+      .footer-title {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 60px;
+        color: #fd9535;
+        text-align: center;
+      }
+
+      .call-to-action {
+        font-size: 18px;
+        width: 277px;
+        height: 64px;
+        border-width: 1px;
+        color: #df335c;
+        border: 2px dashed;
+        border-color: #df335c;
+        font-weight: bold;
+        border-top-left-radius: 28px;
+        border-top-right-radius: 28px;
+        border-bottom-left-radius: 28px;
+        border-bottom-right-radius: 28px;
+        background: #df335b00;
+        cursor: pointer;
+        text-decoration: none;
+        margin-top: 1.5em;
+        margin-bottom: 5em;
+        display: flex;
+        transition: all 0.2s ease;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .call-to-action:hover {
+        border-color: #c7385a;
+        background: #c7385a;
+        color: white;
+      }
+    </style>
+  </head>
+  <body data-barba="wrapper">
+    <div class="container" data-barba="container" data-barba-namespace="home">
+      <h1 class="title">Zar'vikth! (Congrats!)</h1>
+      <p class="desc">
+        You passed the test for a <strong>non existent language!</strong> You
+        have learned some useless words and sentences. <br />
+        My good old friend, ChatGPT helped me with making this weird and non
+        existent language.
+      </p>
+
+      <a
+        href="https://media1.giphy.com/media/wGpsZYQnG6kXDsqNVr/giphy.gif?cid=ecf05e4755kx88jmhvdps1jga0m6te7bh17dymkzditwwy5n&rid=giphy.gif&ct=g"
+        class="call-to-action"
+        >I feel pretty dumb now!</a
+      >
+    </div>
+
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script>
+      barba.init({
+        transitions: [
+          {
+            name: "opacity-transition",
+            leave(data) {
+              return gsap.to(data.current.container, {
+                opacity: 0,
+              });
+            },
+            enter(data) {
+              return gsap.from(data.next.container, {
+                opacity: 0,
+              });
+            },
+          },
+        ],
+      });
+    </script>
+  </body>
+</html>

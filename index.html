@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DKL - DuoKetoLish</title>
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-color: #ffd166;
+        margin: 0;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      main {
+        height: 100%;
+        width: 100%;
+      }
+
+      * {
+        font-family: "Satoshi", sans-serif;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 100%;
+        width: 100%;
+      }
+
+      .desc {
+        color: #df335c;
+        font-weight: 500;
+      }
+
+      .translation {
+        color: #df335c;
+        font-weight: 700;
+        font-size: 24px;
+        margin-top: 0;
+      }
+
+      .translation-title {
+        color: #df335c;
+        font-weight: 700;
+        font-size: 34px;
+      }
+
+      .desc-2 {
+        margin-top: 1.5em;
+        color: #93742d;
+        font-weight: 500;
+      }
+
+      .sub-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        height: 100%;
+        padding: 0 5em;
+      }
+
+      .title {
+        font-weight: 900;
+        font-size: 124px;
+        color: #df335c;
+        text-align: left;
+        margin-bottom: 0;
+      }
+
+      .title-2 {
+        font-weight: 900;
+        font-size: 84px;
+        color: #93742d;
+        margin: 0;
+        text-align: left;
+      }
+
+      .footer-title {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 60px;
+        color: #fd9535;
+        text-align: center;
+      }
+
+      .call-to-action {
+        font-size: 18px;
+        width: 277px;
+        height: 64px;
+        border-width: 1px;
+        color: #df335c;
+        border: 2px dashed;
+        border-color: #df335c;
+        font-weight: bold;
+        border-top-left-radius: 28px;
+        border-top-right-radius: 28px;
+        border-bottom-left-radius: 28px;
+        border-bottom-right-radius: 28px;
+        background: #df335b00;
+        cursor: pointer;
+        text-decoration: none;
+        margin-top: 1.5em;
+        display: flex;
+        transition: all 0.2s ease;
+        /* padding: 15px; */
+        justify-content: center;
+        align-items: center;
+      }
+
+      .call-to-action:hover {
+        border-color: #c7385a;
+        background: #c7385a;
+        color: white;
+      }
+    </style>
+  </head>
+  <body data-barba="wrapper">
+    <div class="container" data-barba="container" data-barba-namespace="home">
+      <div class="sub-container">
+        <h1 class="title">Zarveth!</h1>
+        <p class="desc">
+          Start learning <strong>Ketolish</strong>, a language that is being
+          spoken on Rapa Iti, a Bass Island in French Polynesia.
+        </p>
+        <p class="desc">
+          <strong>Ketolish</strong> is a very easy language to learn.
+        </p>
+        <h2 class="translation-title"><strong>Examples:</strong></h2>
+        <h3 class="translation">"Vorrelon! kethava?"</h3>
+        <h3 class="translation">"Hey! How are you?"</h3>
+      </div>
+      <div class="sub-container">
+        <h1 class="title-2">Are you ready?</h1>
+        <h1 class="title-2">To become an expert?</h1>
+        <p class="desc-2">
+          As <strong>Ketolish</strong> is an easy language, you'll become an
+          expert in no time!<br />
+          You'll become fluent like the locals from Rapa Iti!
+        </p>
+
+        <a href="./voc.html" class="call-to-action">Get Started</a>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script>
+      barba.init({
+        transitions: [
+          {
+            name: "opacity-transition",
+            leave(data) {
+              return gsap.to(data.current.container, {
+                opacity: 0,
+              });
+            },
+            enter(data) {
+              return gsap.from(data.next.container, {
+                opacity: 0,
+              });
+            },
+          },
+        ],
+      });
+    </script>
+  </body>
+</html>
