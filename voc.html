@@ -5,10 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DKL - Vocabulary</title>
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap" rel="stylesheet" />
 
     <style>
       body {
@@ -120,7 +117,6 @@
         margin-bottom: 5em;
         display: flex;
         transition: all 0.2s ease;
-        /* padding: 15px; */
         justify-content: center;
         align-items: center;
       }
@@ -130,24 +126,72 @@
         background: #c7385a;
         color: white;
       }
+
+      @media screen and (max-width: 600px) {
+        .container {
+          flex-direction: column;
+          padding: 0 2em;
+        }
+
+        .sub-container {
+          justify-content: flex-start;
+          width: 100%;
+          padding: 0;
+          height: 100%;
+        }
+
+        .title {
+          font-size: 54px;
+        }
+
+        .title-2 {
+          font-size: 44px;
+        }
+      }
+
+      @media screen and (max-width: 992px) {
+        .container {
+          flex-direction: column;
+          padding: 0 2em;
+        }
+
+        .inner-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          padding: 0;
+          height: 100%;
+          margin: 3em 0;
+        }
+
+        .sub-container {
+          justify-content: flex-start;
+          width: 100%;
+          padding: 0;
+          height: 50%;
+        }
+
+        .title {
+          font-size: 54px;
+        }
+
+        .title-2 {
+          font-size: 44px;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <h1 class="title">Kalkorim! (Start!)</h1>
-      <p class="desc">
-        Scroll down to start learning some <strong>Ketolish</strong> words.
-      </p>
+      <p class="desc">Scroll down to start learning some <strong>Ketolish</strong> words.</p>
       <div class="inner-container">
         <div class="sub-container">
           <img src="./images/lesson1.png" width="70%" alt="" />
         </div>
         <div class="sub-container">
           <h1 class="title-2">Lesson 1 (My name)</h1>
-          <p class="translation">
-            In <strong>Ketolish</strong>, Nelith means me or my. It mostly
-            depends on the context of the conversation.
-          </p>
+          <p class="translation">In <strong>Ketolish</strong>, Nelith means me or my. It mostly depends on the context of the conversation.</p>
           <h2 class="translation-title">Example:</h2>
           <h3 class="translation">"Nelith thalos Issamoth."</h3>
           <h3 class="translation"><strong>means</strong></h3>
@@ -159,12 +203,7 @@
       <div class="inner-container">
         <div class="sub-container">
           <h1 class="title-2">Lesson 2 (Food)</h1>
-          <p class="translation">
-            In <strong>Ketolish</strong>, fruits have a different name than we
-            are commonly used to. For example: Apple means "elvathal" in
-            Ketolish. It doesn't matter if you are talking about a single or
-            multiple apples.
-          </p>
+          <p class="translation">In <strong>Ketolish</strong>, fruits have a different name than we are commonly used to. For example: Apple means "elvathal" in Ketolish. It doesn't matter if you are talking about a single or multiple apples.</p>
           <h2 class="translation-title">Example:</h2>
           <h3 class="translation">"Sylvarix nalarith elvathal"</h3>
           <h3 class="translation"><strong>means</strong></h3>
@@ -182,15 +221,9 @@
         </div>
         <div class="sub-container">
           <h1 class="title-2">Lesson 3 (Job)</h1>
-          <p class="translation">
-            In <strong>Ketolish</strong>, jobs usually have the same name. It
-            depends in which sector you work. In this example: Zalnor means
-            Nurse. But it can also mean doctor or surgeon.
-          </p>
+          <p class="translation">In <strong>Ketolish</strong>, jobs usually have the same name. It depends in which sector you work. In this example: Zalnor means Nurse. But it can also mean doctor or surgeon.</p>
           <h2 class="translation-title">Example:</h2>
-          <h3 class="translation">
-            "Nelith takzorin Zalnor arkinath sa'karianth"
-          </h3>
+          <h3 class="translation">"Nelith takzorin Zalnor arkinath sa'karianth"</h3>
           <h3 class="translation"><strong>means</strong></h3>
 
           <h3 class="translation">"I work as a nurse in a hospital."</h3>

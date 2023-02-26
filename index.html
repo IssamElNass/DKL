@@ -5,10 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DKL - DuoKetoLish</title>
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap" rel="stylesheet" />
 
     <style>
       body {
@@ -122,19 +119,72 @@
         background: #c7385a;
         color: white;
       }
+
+      @media screen and (max-width: 600px) {
+        .container {
+          flex-direction: column;
+        }
+
+        .sub-container {
+          justify-content: flex-start;
+          width: 100%;
+          padding: 0 2em;
+          height: 100%;
+        }
+
+        .title {
+          font-size: 54px;
+        }
+
+        .title-2 {
+          font-size: 44px;
+        }
+
+        .translation {
+          display: none;
+        }
+
+        .translation-title {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 992px) {
+        .container {
+          flex-direction: column;
+        }
+
+        .sub-container {
+          justify-content: flex-start;
+          width: 100%;
+          padding: 0 2em;
+          height: 50%;
+        }
+
+        .title {
+          font-size: 54px;
+        }
+
+        .title-2 {
+          font-size: 44px;
+        }
+
+        .translation {
+          display: none;
+        }
+
+        .translation-title {
+          display: none;
+        }
+      }
     </style>
   </head>
   <body data-barba="wrapper">
     <div class="container" data-barba="container" data-barba-namespace="home">
       <div class="sub-container">
         <h1 class="title">Zarveth!</h1>
-        <p class="desc">
-          Start learning <strong>Ketolish</strong>, a language that is being
-          spoken on Rapa Iti, a Bass Island in French Polynesia.
-        </p>
-        <p class="desc">
-          <strong>Ketolish</strong> is a very easy language to learn.
-        </p>
+        <p class="desc">Start learning <strong>Ketolish</strong>, a language that is being spoken on Rapa Iti, a Bass Island in French Polynesia.</p>
+        <p class="desc"><strong>Ketolish</strong> is a very easy language to learn.</p>
         <h2 class="translation-title"><strong>Examples:</strong></h2>
         <h3 class="translation">"Vorrelon! kethava?"</h3>
         <h3 class="translation">"Hey! How are you?"</h3>
@@ -143,8 +193,7 @@
         <h1 class="title-2">Are you ready?</h1>
         <h1 class="title-2">To become an expert?</h1>
         <p class="desc-2">
-          As <strong>Ketolish</strong> is an easy language, you'll become an
-          expert in no time!<br />
+          As <strong>Ketolish</strong> is an easy language, you'll become an expert in no time!<br />
           You'll become fluent like the locals from Rapa Iti!
         </p>
 
